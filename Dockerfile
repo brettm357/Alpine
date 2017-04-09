@@ -1,4 +1,4 @@
-FROM alpine:3.5
+FROM alpine:latest
 MAINTAINER brettm357@me.com
 
 ENV UNIFI_VERSION 5.6.2-224554000b
