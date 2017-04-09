@@ -3,7 +3,7 @@ MAINTAINER brettm357@me.com
 
 
 RUN apk add --no-cache \
-    mongodb
+    mongodb \
     openjdk8-jre
 
 
