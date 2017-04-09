@@ -8,6 +8,9 @@ RUN apk upgrade --update \
     apk add --no-cache \
     mongodb \
     openjdk8-jre
+    
+    curl https://www.ubnt.com/downloads/unifi/$UNIFI_VERSION/unifi_sysvinit_all.deb
+
 
 
 
