@@ -5,8 +5,7 @@ ENV UNIFI_VERSION 5.6.2-224554000b
 
 RUN apk upgrade --update \
 
-    apk add --no-cache \
-    curl \
+    apk add --no-cache curl \
     mongodb \
     openjdk8-jre \
     
