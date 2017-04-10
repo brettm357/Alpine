@@ -3,11 +3,13 @@ MAINTAINER brettm357@me.com
 
 ENV UNIFI_VERSION 5.6.2-224554000b
 
-RUN @testing http://nl.alpinelinux.org/alpine/edge/testing
+#RUN @testing http://nl.alpinelinux.org/alpine/edge/testing
+
+RUN echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories  
 
 RUN apk upgrade --update && \
 
-    apk add --update --no-cache \
+    apk --no-cache add \
     curl \
     mongodb \
     openjdk8-jre \
