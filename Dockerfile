@@ -10,9 +10,11 @@ RUN echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories
 RUN apk upgrade --update && \
 
     apk --no-cache add \
+    dpkg \
     curl \
     mongodb \
     openjdk8-jre \
+    wget
     
     #curl https://www.ubnt.com/downloads/unifi/$UNIFI_VERSION/unifi_sysvinit_all.deb
 
