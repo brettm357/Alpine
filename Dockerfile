@@ -20,6 +20,8 @@ RUN apk upgrade --update && \
     #wget -nv https://www.ubnt.com/downloads/unifi/$UNIFI_VERSION/unifi_sysvinit_all.deb && \
     #dpkg --install unifi_sysvinit_all.deb
     
+    VOLUME /usr/lib/unifi/data
+    
     WORKDIR /usr/lib/unifi
 
 
