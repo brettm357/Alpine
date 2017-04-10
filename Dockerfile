@@ -14,7 +14,7 @@ RUN apk upgrade --update && \
     curl \
     mongodb \
     openjdk8-jre \
-    wget
+    wget \
     
     wget https://www.ubnt.com/downloads/unifi/$UNIFI_VERSION/unifi_sysvinit_all.deb
 
