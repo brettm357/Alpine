@@ -23,7 +23,7 @@ RUN apk upgrade --update && \
     #dpkg --install unifi_sysvinit_all.deb
     #mkdir /root -p \
     #wget https://dl.ubnt.com/unifi/$UNIFI_VERSION/UniFi.unix.zip 
-    wget https://www.ubnt.com/downloads/unifi/5.6.2-224554000b/UniFi.unix.zip
+    wget -nv https://www.ubnt.com/downloads/unifi/5.6.2-224554000b/UniFi.unix.zip
     #/home/UniFi.unix.zip
     
     VOLUME /usr/lib/unifi/data
