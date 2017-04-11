@@ -3,6 +3,7 @@ MAINTAINER brettm357@me.com
 
 RUN apk add --no-cache --update-cache bash
 
+CMD ["/bin/bash"]
 #ENV HOME /root
 #ENV UNIFI_VERSION 5.6.2-224554000b
 
