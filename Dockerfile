@@ -1,9 +1,9 @@
 FROM alpine:latest
 MAINTAINER brettm357@me.com
 
-RUN apk add --no-cache --update-cache bash
+#RUN apk add --no-cache --update-cache bash
 
-CMD ["/bin/bash"]
+#CMD ["/bin/bash"]
 #ENV HOME /root
 #ENV UNIFI_VERSION 5.6.2-224554000b
 
@@ -21,6 +21,28 @@ CMD ["/bin/bash"]
 #    mongodb \
 #    openjdk8-jre \
 #    wget \
+apk add --no-cache --virtual=build-dependencies \
+	curl \
+	unzip && \
+
+ # install runtime packages
+apk add --no-cache \
+	openjdk8-jre-base && \
+
+ # install ubooquity
+mkdir -p \
+	/home/unifi \
+#	/opt/ubooquity/fonts && \
+#curl -o \
+# /tmp/UniFi.unix.zip -L \
+#	"http://vaemendis.net/ubooquity/downloads/Ubooquity-${UBOOQUITY_VER}.zip" && \
+# unzip /tmp/ubooquity.zip -d /opt/ubooquity && \
+
+# cleanup
+# apk del --purge \
+#	build-dependencies && \
+# rm -rf \
+#	/tmp/*
     
     #wget -O https://www.ubnt.com/downloads/unifi/$UNIFI_VERSION/unifi_sysvinit_all.deb
     #apk add --allow-untrusted unifi_sysvinit_all.deb
@@ -29,7 +51,8 @@ CMD ["/bin/bash"]
     #mkdir /root -p \
     #wget https://dl.ubnt.com/unifi/$UNIFI_VERSION/UniFi.unix.zip 
     #wget -nv https://www.ubnt.com/downloads/unifi/5.6.2-224554000b/UniFi.unix.zip
-    #curl -L -o UniFi.unix.zip https://www.ubnt.com/downloads/unifi/5.6.2-224554000b/UniFi.unix.zip
+ curl -L -o /tmp/UniFi.unix.zip https://www.ubnt.com/downloads/unifi/5.6.2-224554000b/UniFi.unix.zip && \
+ unzip /tmp/UniFi.unix.zip -d /home/unifi
     #/home/UniFi.unix.zip
     
     #VOLUME /usr/lib/unifi/data
