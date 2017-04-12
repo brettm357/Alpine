@@ -31,7 +31,7 @@ RUN apk add --no-cache \
 
  # install ubooquity
 mkdir -p \
-	/home/unifi \
+	/opt/unifi \
 #	/opt/ubooquity/fonts && \
 #curl -o \
 # /tmp/UniFi.unix.zip -L \
@@ -52,7 +52,7 @@ mkdir -p \
     #wget https://dl.ubnt.com/unifi/$UNIFI_VERSION/UniFi.unix.zip 
     #wget -nv https://www.ubnt.com/downloads/unifi/5.6.2-224554000b/UniFi.unix.zip
  curl -o /tmp/UniFi.unix.zip -L "https://www.ubnt.com/downloads/unifi/5.6.2-224554000b/UniFi.unix.zip" && \
- unzip /tmp/UniFi.unix.zip -d /home/unifi
+ unzip /tmp/UniFi.unix.zip -d /opt/unifi
     #/home/UniFi.unix.zip
     
     #VOLUME /usr/lib/unifi/data
