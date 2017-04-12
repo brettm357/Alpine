@@ -19,15 +19,15 @@ MAINTAINER brettm357@me.com
 #    wget \
 RUN apk add --no-cache --virtual=build-dependencies \
 	curl \
-	unzip
+	unzip && \
 
  # install runtime packages
-RUN apk add --no-cache \
-	openjdk8-jre-base
+    apk add --no-cache \
+	openjdk8-jre-base && \
 
  # install ubooquity
-RUN mkdir -p \
-	/opt/unifi
+    mkdir -p \
+	/opt/unifi && \
 #/opt/ubooquity/fonts && \
 #curl -o \
 # /tmp/UniFi.unix.zip -L \
@@ -42,7 +42,7 @@ RUN mkdir -p \
     #mkdir /root -p \
     #wget https://dl.ubnt.com/unifi/$UNIFI_VERSION/UniFi.unix.zip 
     #wget -nv https://www.ubnt.com/downloads/unifi/5.6.2-224554000b/UniFi.unix.zip
-RUN curl -o \
+    curl -o \
     /tmp/unifi.zip -L "https://www.ubnt.com/downloads/unifi/5.6.2-224554000b/UniFi.unix.zip" && \
     unzip /tmp/unifi.zip -d /opt/unifi
     
