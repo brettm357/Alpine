@@ -54,6 +54,10 @@ RUN mkdir -p \
  RUN curl -o \
  /tmp/unifi.zip -L "https://www.ubnt.com/downloads/unifi/5.6.2-224554000b/UniFi.unix.zip" && \
  unzip /tmp/unifi.zip -d /opt/unifi
+ 
+ apk del --purge \
+ build-dependencies && \
+ rm -rf /tmp/*
     #/home/UniFi.unix.zip
     
     #VOLUME /usr/lib/unifi/data
