@@ -51,8 +51,9 @@ mkdir -p \
     #mkdir /root -p \
     #wget https://dl.ubnt.com/unifi/$UNIFI_VERSION/UniFi.unix.zip 
     #wget -nv https://www.ubnt.com/downloads/unifi/5.6.2-224554000b/UniFi.unix.zip
- curl /tmp/UniFi.unix.zip -L "https://www.ubnt.com/downloads/unifi/5.6.2-224554000b/UniFi.unix.zip" && \
- unzip /tmp/UniFi.unix.zip -d /opt/unifi
+ curl -o \
+ /tmp/unifi.zip -L "https://www.ubnt.com/downloads/unifi/5.6.2-224554000b/UniFi.unix.zip" && \
+ unzip /tmp/unifi.zip -d /opt/unifi
     #/home/UniFi.unix.zip
     
     #VOLUME /usr/lib/unifi/data
