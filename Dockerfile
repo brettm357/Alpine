@@ -44,7 +44,7 @@ RUN apk add --no-cache --virtual=build-dependencies \
     #wget -nv https://www.ubnt.com/downloads/unifi/5.6.2-224554000b/UniFi.unix.zip
     curl -o \
     /tmp/unifi.zip -L "https://www.ubnt.com/downloads/unifi/5.6.2-224554000b/UniFi.unix.zip" && \
-    unzip /tmp/unifi.zip -d /opt/unifi \
+    unzip /tmp/unifi.zip -d /opt/unifi && \
     
     # Cleanup  
     apk del --purge \
