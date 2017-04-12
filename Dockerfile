@@ -23,7 +23,7 @@ MAINTAINER brettm357@me.com
 #    wget \
 apk add --no-cache --virtual=build-dependencies \
 	curl \
-	unzip && \
+	unzip
 
  # install runtime packages
 apk add --no-cache \
