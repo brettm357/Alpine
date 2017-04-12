@@ -51,13 +51,13 @@ RUN mkdir -p \
     #mkdir /root -p \
     #wget https://dl.ubnt.com/unifi/$UNIFI_VERSION/UniFi.unix.zip 
     #wget -nv https://www.ubnt.com/downloads/unifi/5.6.2-224554000b/UniFi.unix.zip
- RUN curl -o \
- /tmp/unifi.zip -L "https://www.ubnt.com/downloads/unifi/5.6.2-224554000b/UniFi.unix.zip" && \
- unzip /tmp/unifi.zip -d /opt/unifi
+RUN curl -o \
+    /tmp/unifi.zip -L "https://www.ubnt.com/downloads/unifi/5.6.2-224554000b/UniFi.unix.zip" && \
+    unzip /tmp/unifi.zip -d /opt/unifi \
  
- apk del --purge \
- build-dependencies && \
- rm -rf /tmp/*
+    apk del --purge \
+    build-dependencies && \
+    rm -rf /tmp/*
     #/home/UniFi.unix.zip
     
     #VOLUME /usr/lib/unifi/data
