@@ -21,12 +21,12 @@ MAINTAINER brettm357@me.com
 #    mongodb \
 #    openjdk8-jre \
 #    wget \
-apk add --no-cache --virtual=build-dependencies \
+RUN apk add --no-cache --virtual=build-dependencies \
 	curl \
 	unzip
 
  # install runtime packages
-apk add --no-cache \
+RUN apk add --no-cache \
 	openjdk8-jre-base && \
 
  # install ubooquity
