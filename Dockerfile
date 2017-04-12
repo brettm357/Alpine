@@ -27,7 +27,7 @@ RUN apk add --no-cache --virtual=build-dependencies \
 
  # install runtime packages
 RUN apk add --no-cache \
-	openjdk8-jre-base && \
+	openjdk8-jre-base
 
  # install ubooquity
 RUN mkdir -p \
