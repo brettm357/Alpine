@@ -22,7 +22,8 @@ RUN apk add --no-cache --virtual=build-dependencies \
 
  # INSTALL RUNTIME PACKAGES
     apk add --no-cache \
-	openjdk8-jre-base && \
+	openjdk8-jre-base \
+	supervisor && \
 
  # INSTALL UNIFI
    # mkdir -p \
