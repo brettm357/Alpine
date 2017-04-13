@@ -14,7 +14,7 @@ RUN apk upgrade --update && \
  #   curl \
  #   mongodb \
  #   openjdk8-jre \
-RUN apk add --no-cache --virtual=build-dependencies \
+    apk add --no-cache --virtual=build-dependencies \
 	curl \
 	unzip && \
 
