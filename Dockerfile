@@ -8,14 +8,12 @@ ENV UNIFI_VERSION 5.6.2-224554000b
 
 #RUN echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories 
 
-#RUN apk upgrade --update && \
+RUN apk upgrade --update && \
 
-#    apk --no-cache add \
-#    dpkg \
-#    curl \
-#    mongodb \
-#    openjdk8-jre \
-#    wget \
+ #   apk --no-cache add \
+ #   curl \
+ #   mongodb \
+ #   openjdk8-jre \
 RUN apk add --no-cache --virtual=build-dependencies \
 	curl \
 	unzip && \
@@ -39,9 +37,9 @@ RUN apk add --no-cache --virtual=build-dependencies \
     build-dependencies && \
     rm -rf /tmp/*
     
-    VOLUME /usr/lib/unifi/data
+VOLUME /usr/lib/unifi/data
     
-    WORKDIR /usr/lib/unifi
+WORKDIR /usr/lib/unifi
 
 
 
