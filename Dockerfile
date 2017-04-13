@@ -1,6 +1,7 @@
 FROM alpine:latest
 MAINTAINER brettm357@me.com
 
+ENV DEBIAN_FRONTEND noninteractive
 ENV HOME /root
 ENV UNIFI_VERSION 5.6.2-224554000b
 
