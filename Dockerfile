@@ -25,12 +25,13 @@ RUN apk add --no-cache --virtual=build-dependencies \
 	openjdk8-jre-base && \
 
  # INSTALL UNIFI
-    mkdir -p \
-	/opt/unifi && \
+   # mkdir -p \
+   # /opt/unifi && \
 
     curl -o \
     /tmp/unifi.zip -L "https://www.ubnt.com/downloads/unifi/$UNIFI_VERSION/UniFi.unix.zip" && \
-    unzip /tmp/unifi.zip -d /opt/unifi && \
+    unzip /tmp/unifi.zip && \
+    #-d /opt/unifi && \
     
  # CLEANUP
     apk del --purge \
