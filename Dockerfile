@@ -1,7 +1,7 @@
 FROM alpine:latest
 MAINTAINER brettm357@me.com
 
-#ENV HOME /root
+ENV HOME /root
 ENV UNIFI_VERSION 5.6.2-224554000b
 
 #RUN @testing http://nl.alpinelinux.org/alpine/edge/testing
