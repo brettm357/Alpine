@@ -22,7 +22,8 @@ RUN apk upgrade --update && \
  # INSTALL RUNTIME PACKAGES
     apk add --no-cache \
 	openjdk8-jre-base \
-	supervisor && \
+	supervisor \
+	mongodb && \
 
  # INSTALL UNIFI
    mkdir -p /opt && \
