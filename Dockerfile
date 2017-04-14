@@ -25,13 +25,14 @@ RUN apk upgrade --update && \
 	supervisor && \
 
  # INSTALL UNIFI
-   # mkdir -p \
-   # /opt/unifi && \
+   mkdir -p /opt && \
+   #cd ~ && wget http://dl.ubnt.com/unifi/5.3.8/UniFi.unix.zip
+   #unzip -q UniFi.unix.zip -d /opt
+   #chown -R ubnt:ubnt /opt/UniFi
 
     curl -o \
     /tmp/unifi.zip -L "https://www.ubnt.com/downloads/unifi/$UNIFI_VERSION/UniFi.unix.zip" && \
-    unzip /tmp/unifi.zip && \
-    #-d /opt/unifi && \
+    unzip /tmp/unifi.zip -d /opt && \
     
  # CLEANUP
     apk del --purge \
